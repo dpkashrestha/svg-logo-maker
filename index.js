@@ -1,15 +1,17 @@
+// Import necessary libraries
 const inquirer = require("inquirer");
 const fs = require("fs");
 const Circle = require('./lib/circle.js');
 const Square = require('./lib/square.js');
 const Triangle = require('./lib/triangle.js');
 
-//Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
   {
-    type: "input",
+    type: "maxlength-input",
     message: "Please enter up to three characters:",
     name: "text",
+    maxLength: 3
   },
   {
     type: "input",
@@ -29,6 +31,7 @@ const questions = [
   },
 ];
 
+// Function to read user choices and create necessary shape
 function createSvgLogo(response) {
   let shape;
   if (response.shape === "circle") {
@@ -41,14 +44,14 @@ function createSvgLogo(response) {
   return shape.renderSvgLogo();
 }
 
-// Create a function to create logo file
+// Function to create logo file
 function writeToFile(fileName, data) {
   fs.writeFile("./examples/" + fileName, data, (err) =>
     err ? console.error(err) : console.log("Generated logo.svg")
   );
 }
 
-// Create a function to initialize app
+// Function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
     const svgContent = createSvgLogo(response);
