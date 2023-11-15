@@ -25,7 +25,7 @@ node index.js
 <a href=https://opensource.org/licenses/MIT>MIT</a>
 
 ## Video
-[![Watch the video](https://drive.google.com/file/d/170cgf5d4CmuX_054EjpuhUIt9iEKFknL/view?usp=sharing)
+https://drive.google.com/file/d/170cgf5d4CmuX_054EjpuhUIt9iEKFknL/view
 
 ## Tests 
 
