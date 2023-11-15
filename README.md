@@ -1,6 +1,4 @@
 
-  #64382E
-  #FF5733
 # SVG logo maker ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
 
 
